@@ -1,0 +1,209 @@
+/* Banner Section */
+.banner-hotel {
+    width: 100%;
+    height: 80vh;
+    background: url(./img/9.jpg) no-repeat top right;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+/* Main Content Container */
+.second-sec-hotel {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.second-main-hotel {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Title Styling */
+.hotel-title {
+    width: 400px;
+    height: 200px;
+    font-size: 63px;
+    text-align: center;
+    margin: auto;
+    padding-top: 170px;
+    font-weight: bold;
+    color: rgb(251, 251, 251);
+    font-family: "Libre Baskerville", serif;
+}
+
+/* Section Heading Style */
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #2c3e50;
+    margin: 40px 0;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2 strong {
+    color: #3498db;
+    background-image: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgba(231, 76, 60, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 900;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgba(231, 76, 60, 1) 100%);
+    bottom: -10px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+h2:hover::before {
+    transform: scaleX(1);
+}
+
+/* Unified Card Styles */
+.hotel-list,
+.restaurant-list,
+.transport-list,
+.activity-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Common Card Style for All Services */
+.hotel-card,
+.restaurant-card,
+.transport-card,
+.activity-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(20% - 16px);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px; /* Increased height for better spacing */
+}
+
+/* Image Styling */
+.hotel-card img,
+.restaurant-card img,
+.transport-card img,
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Title Styling */
+.hotel-card h3,
+.restaurant-card h3,
+.transport-card h3,
+.activity-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
+    min-height: 50px;
+    line-height: 1.3;
+}
+
+/* Details Styling */
+.price,
+.cuisine,
+.rating,
+.location,
+.description {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Specific Color Styles */
+.price { color: #ff0000; }
+.rating { color: #f39c12; }
+.activity-card h3 { color: #0073e6; }
+
+/* Booking Button */
+.book-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hotel-card,
+    .restaurant-card,
+    .transport-card,
+    .activity-card {
+        width: calc(25% - 15px);
+    }
+}
+
+@media (max-width: 992px) {
+    .hotel-card,
+    .restaurant-card,
+    .transport-card,
+    .activity-card {
+        width: calc(33.33% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hotel-card,
+    .restaurant-card,
+    .transport-card,
+    .activity-card {
+        width: calc(50% - 15px);
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hotel-card,
+    .restaurant-card,
+    .transport-card,
+    .activity-card {
+        width: 100%;
+        min-height: auto;
+    }
+    
+    .hotel-title {
+        font-size: 48px;
+        width: 100%;
+        padding-top: 100px;
+    }
+}
